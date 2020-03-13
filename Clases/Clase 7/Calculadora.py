@@ -17,7 +17,7 @@ resultado=multiplicar(2,4)
 print(resultado)
 
 def dividir(x,y):
-    division=0
+    division==0
     if y==0:
         division="Operación no valida"
     else:
