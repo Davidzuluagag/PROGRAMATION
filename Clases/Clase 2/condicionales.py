@@ -17,7 +17,6 @@ print(MENSAJE_BIENVENIDO)
 _nombrePersona = input (PREGUNTA_NOMBRE)
 if (NOMBRE_PERSONAL == _nombrePersona) :
     print(MENSAJE_TOCAYO)
-print (MENSAJE_DESPEDIDA)
 _edadPersona = int (input(PREGUTA_EDAD))
 if ((_edadPersona >= 0) and (_edadPersona <= 25)):
     print (MENSAJE_JOVEN)
