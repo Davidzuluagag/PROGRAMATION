@@ -1,20 +1,23 @@
 class Canguro():
-    def __init__(self, color, peso, altura, sexo):
+    def __init__(self, color, peso, numero, sexo):
         self.color=color
         self.peso=peso
-        self.altura=altura
+        self.numero=numero
         self.sexo=sexo
+    def saltar (self, saltos):
+        for i in range (saltos):
+            print("uno de los canguros saltó {} veces".format(i+2))
 
-canguro1=Canguro ("rojo", 60, 140, "masculino")
-canguro2=Canguro ("rojo", 80, 155, "masculino")
-canguro3=Canguro ("gris", 62, 140, "femenino")
-canguro4=Canguro ("rojo", 85, 157, "masculino")
-canguro5=Canguro ("gris", 65, 145, "femenino")
-canguro6=Canguro ("gris", 70, 150, "femenino")
-canguro7=Canguro ("rojo", 64, 150, "femenino")
-canguro8=Canguro ("rojo", 40, 120, "masculino")
-canguro9=Canguro ("gris", 56, 145, "femenino")
-canguro10=Canguro ("rojo", 60, 142, "femenino")
+canguro1=Canguro ("rojo", 60, 10, "masculino")
+canguro2=Canguro ("rojo", 80, 20, "masculino")
+canguro3=Canguro ("gris", 62, 30, "femenino")
+canguro4=Canguro ("rojo", 85, 40, "masculino")
+canguro5=Canguro ("gris", 65, 50, "femenino")
+canguro6=Canguro ("gris", 70, 60, "femenino")
+canguro7=Canguro ("rojo", 64, 70, "femenino")
+canguro8=Canguro ("rojo", 40, 80, "masculino")
+canguro9=Canguro ("gris", 56, 90, "femenino")
+canguro10=Canguro ("rojo", 60, 100, "femenino")
 
 print("el color del canguro 1 es", canguro1.color, "y su sexo es", canguro1.sexo)
 print("el color del canguro 2 es", canguro2.color, "y su sexo es", canguro2.sexo)
@@ -26,10 +29,7 @@ print("el color del canguro 7 es", canguro7.color, "y su sexo es", canguro7.sexo
 print("el color del canguro 8 es", canguro8.color, "y su sexo es", canguro8.sexo)
 print("el color del canguro 9 es", canguro9.color, "y su sexo es", canguro9.sexo)
 print("el color del canguro 10 es", canguro10.color, "y su sexo es", canguro10.sexo)
-
-canguro1=Canguro
-saltos=45
-print("uno de los canguros saltó", saltos, "veces")
+canguro1.saltar(9)
 
 class Cuidador():
     def __init__(self, identificación, nombre):
@@ -53,10 +53,13 @@ alimentó=8
 print("uno de los cuidadores,", cuidador1.nombre, ", alimentó a", alimentó, "de los canguros")
 
 class Jefe(Cuidador):
-    def contratar_cuidador(self, nombre):
-        self.nombre=nombre
+    def contratar_cuidador (self, id, name):
+        nuevo=Cuidador(identificación, nombre)
+        return nuevo
+    def dar_mensaje(self, mensaje):
+        print("¡Les cuento que esta sera la mejor temporada de todas y para todos!")
+        print(mensaje)
 
-cuidador6=Jefe (127, "El loco")
-print("¡Hola, soy el nuevo jefe y he contratado a", cuidador6.nombre, "; un nuevo cuidador!")
-print("¡Les cuento que esta sera la mejor temporada de todas y para todos!")
-
+jefe1=Jefe(000, "Ruben")
+jefe1.dar_mensaje("¡Hola, soy el nuevo jefe y he contratado a", cuidador6.nombre, "; un nuevo cuidador!")
+cuidador6=jefe1.contratar_cuidador(128, "Nemecio")
